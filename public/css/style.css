@@ -1,0 +1,36 @@
+ .form{
+
+    margin-top: 50px;
+    text-align: center;
+   
+}
+
+.uneaten, .eaten{
+    text-align: center;
+    margin-top: 50px;
+    width: 50%;
+}
+
+.uneaten button{
+    background-color: red;
+}
+
+
+.eaten button{
+    background-color: blue;
+}
+
+.burger-btn{
+    margin: 10px;
+}
+
+h1{
+    text-align: center;
+}
+
+img{
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+}

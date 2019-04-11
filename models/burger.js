@@ -4,15 +4,17 @@ class Burger {
     constructor(){
 
     }
-    select(cb){
+    all(cb){
         orm.selectAll("burgers", function(res){
             cb(res)
+            console.log("Receiving data.")
         })
     }
 
     insert(val, cb){
         orm.insertOne("burgers", "burger_name", val, function(res){
             cb(res)
+            console.log("Receiving data.")
         })
     }
 
@@ -20,6 +22,7 @@ class Burger {
         
         orm.updateOne("burgers", "devoured", val, id, function(res){
             cb(res)
+            console.log("Receiving data.")
         })
     }
 }
