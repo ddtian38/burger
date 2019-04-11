@@ -16,6 +16,7 @@ class Orm{
     }
 
     insertOne(table, col, val, cb){
+        console.log(val)
         var query = "INSERT INTO ?? (??) VALUES (?)";
         connection.query(query, [table, col, val], function(err, res){
             if(err) throw err;

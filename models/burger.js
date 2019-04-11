@@ -14,7 +14,7 @@ class Burger {
     insert(val, cb){
         orm.insertOne("burgers", "burger_name", val, function(res){
             cb(res)
-            console.log("Receiving data.")
+            console.log("Inserting data.")
         })
     }
 
@@ -22,7 +22,7 @@ class Burger {
         
         orm.updateOne("burgers", "devoured", val, id, function(res){
             cb(res)
-            console.log("Receiving data.")
+            console.log("Updating data.")
         })
     }
 }
