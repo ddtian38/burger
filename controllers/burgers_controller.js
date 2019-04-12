@@ -8,7 +8,7 @@ const burger = require("../models/burger.js")
 
 router.post("/api/burgers/", function(req, res){
     console.log(req.body)
-    burger.insert(req.body.burger, function(response){
+    burger.insert(["burger_name", "img_link"], [req.body.burger, req.body.img_link], function(response){
         if(response.affectedRows === 0){
             res.status(500).send()
         }else{
@@ -38,7 +38,6 @@ router.get("/", function(req, res){
         console.log(burgerObjects)
 
         res.render("index", {burgers: data})
-
     })
 })
 

@@ -5,6 +5,14 @@ class Orm{
 
     }
 
+    createQuestionMarks(arr){
+        var str = []
+        for(var i = 0; i < arr.length; i++){
+            str.push("?")
+        }
+        
+        return str.toString();
+    }
     selectAll(table, cb){
         var query = "SELECT * FROM ??"
         connection.query(query, [table], function(err, data){
@@ -15,10 +23,17 @@ class Orm{
 
     }
 
-    insertOne(table, col, val, cb){
-        console.log(val)
-        var query = "INSERT INTO ?? (??) VALUES (?)";
-        connection.query(query, [table, col, val], function(err, res){
+    insert(table, cols, vals, cb){
+        console.log(vals)
+        var query = "INSERT INTO " + table;
+        query += "(",
+        query += cols.toString();
+        query += ") VALUES (";
+        query += this.createQuestionMarks(vals)
+        query += ");"
+     
+        console.log(query)
+        connection.query(query, vals, function(err, res){
             if(err) throw err;
             // console.log(res);
             cb(res);

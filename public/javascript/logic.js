@@ -4,7 +4,9 @@ $(document).ready(function(){
         e.preventDefault()
         
         var burgerObj = {
-            burger:$("#burger-form").val().trim()
+            burger:$("#burger-form").val().trim(),
+            img_link: $("#burger-pic").val()
+            
         };
 
         console.log(burgerObj)

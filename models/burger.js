@@ -11,8 +11,8 @@ class Burger {
         })
     }
 
-    insert(val, cb){
-        orm.insertOne("burgers", "burger_name", val, function(res){
+    insert(cols, vals, cb){
+        orm.insert("burgers", cols , vals, function(res){
             cb(res)
             console.log("Inserting data.")
         })
