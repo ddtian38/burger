@@ -1,4 +1,5 @@
 const connection = require("./connection.js")
+console.log("hi")
 
 class Orm{
     constructor(){
