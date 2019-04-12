@@ -1,5 +1,7 @@
  body{
-     background-color: salmon;
+     background-image: url("/img/burger_background.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
  }
  
  .jumbotron {
@@ -21,7 +23,7 @@
 
 
  .form{
-     background-color: white;
+    background-color: white;
     border: 2px solid black;
     margin-top: 50px;
 }
@@ -57,4 +59,40 @@ img{
     margin: 0 auto;
     width: 200px;
     height: 200px;
+}
+.image-container{
+    background-color: white;
+    padding: 10px;
+    border: 2px black solid;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    height: 200px;
+    width: 300px;
+    margin: 5px;
+
+
+}
+
+.image-container button{
+    width: 85%;
+    position: absolute;
+    top: 75%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+.image-container img, .image-container img{
+    width: 100%;
+    height: 100%;
 }
